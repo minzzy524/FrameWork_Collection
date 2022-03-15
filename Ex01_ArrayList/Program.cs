@@ -9,7 +9,7 @@ namespace Ex01_ArrayList
 {
     class Program
     {
-        public static void PrintValues(IEnumerable myList)
+        public static void PrintValues(IEnumerable myList) // (다형성) IEnumerable 부모 타입으로 가지는 모든 자식은 parameter 올 수 있다.
         {
             IList li =(IList)myList; // 다운 캐스팅 (Count 쓸라고)
             Console.WriteLine("Count : {0}", li.Count);
@@ -31,6 +31,9 @@ namespace Ex01_ArrayList
             // ArrayList 는 내부적으로 데이터를 Array로 관리한다.
             // ArrayList 의 단점 : 배열이기 때문에 중간에 추가하면 다 자리 옮겨야 한다.
             // 순차적으로 나열된 자원을 관리할 수 있는 클래스 (내부적으로는 배열)
+            // 순차적인 데이터의 추가 삭제 성능이 괜찮다.  -> ArrayList
+            // 데이터의 추가, 삭제를 중간에 해도 성능이 괜찮은 건 -> LinkedList (얘는 노드로 되어 있어서 중간에 하나 빠져도 주소값만 바꿔 연결해주면 됨) 
+
             ArrayList list = new ArrayList();
             list.Add(10);
             list.Add(20);

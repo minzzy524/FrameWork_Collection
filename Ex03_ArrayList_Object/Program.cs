@@ -107,7 +107,8 @@ namespace Ex03_ArrayList_Object
     class Program
     {
         static void Main(string[] args)
-        {
+        {   // ?? add(Object parameter)
+            // 문제점) 1. 많은 메모리 2. boxing/unboxing -> casting 해야 함
             ArrayList list = new ArrayList();
             list.Add(new Account("111", "홍길동"));
             list.Add(new Account("222", "김유신"));
